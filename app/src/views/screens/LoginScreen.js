@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Dimensions,Alert,ImageBackground,Text,View,ScrollView, TouchableOpacity,TextInput} from 'react-native';
+import { StyleSheet, Dimensions,Alert,Image,ImageBackground,Text,View,ScrollView, TouchableOpacity,TextInput} from 'react-native';
 import { useState } from 'react';
 
 
@@ -49,16 +49,22 @@ export default function LoginScreen({navigation}) {
   
   return (
     <ScrollView>
-    <ImageBackground style= {styles.back} source={require("../../../../assets/loard.png")}>
+    <ImageBackground style= {styles.back} source={require("../../../../assets/s.png")}>
      <StatusBar style="auto" />
     <View style={styles.container}>
   <StatusBar style="auto" />
         <View>
-             <Text style = {styles.Text}>Welcome to Travel App</Text>  
+             <Text style = {styles.Text}>Harahara</Text>  
          </View>
+         <View>
+            <Image
+              style={styles.image}
+              source={require('../../../../assets/shi.png')}
+            />
+          </View>
          <View style ={styles.inputField}>
    
-   <View style ={styles.inputContainer}>
+      <View style ={styles.inputContainer}>
     
 
   
@@ -139,12 +145,19 @@ const styles = StyleSheet.create({
   fontSize:30,
   textAlign:"center",
   alignSelf:"flex-start",
-    color:"#3B278C",
+    color:"black ",
   margin:7,
   fontWeight:"bold",
     
-  marginBottom:40
+  marginBottom:10
  
+  },
+  image: {
+    width: 50,
+    height: 50,
+   marginBottom:10,
+    borderRadius: 50,
+
   },
 
     inputField : {
@@ -169,8 +182,8 @@ const styles = StyleSheet.create({
     fontSize:18,
   },
   passwordStyles: {
-    color:"black",
-    fontSize:15,
+    color:"white",
+    fontSize:18,
     fontWeight:"bold"
   },
   

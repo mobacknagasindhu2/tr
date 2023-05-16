@@ -32,7 +32,7 @@ const DetailsScreen = ({navigation, route}) => {
           <Icon
             name="arrow-back-ios"
             size={28}
-            color="white"
+            color="black"
             onPress={navigation.goBack}
           />
           <Icon name="bookmark-border" size={28} color="white" />
@@ -98,7 +98,7 @@ const DetailsScreen = ({navigation, route}) => {
                 color: "white",
                 marginLeft: 5,
               }}>
-              ${item.price}
+              {item.price}
             </Text>
            
           </View>

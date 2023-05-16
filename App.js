@@ -15,20 +15,19 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer >
-      <Stack.Navigator screenOptions={{headerShown: false} }> 
-    
-      <Stack.Screen name="Register" component={RegisterScreen}/> 
-       <Stack.Screen name="LogIn" component={LoginScreen} />
-       <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
 
-       <Stack.Screen name="HomeScreen" component={BottomNavigator} />
-       <Stack.Screen name= "DetailsScreen" component={DetailsScreen}/>
+        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="LogIn" component={LoginScreen} />
+        <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+
+        <Stack.Screen name="HomeScreen" component={BottomNavigator} />
+        <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
         <Stack.Screen name="Successfully" component={SuccessfullyScreen} />
-      
-  </Stack.Navigator>
+
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
 
 

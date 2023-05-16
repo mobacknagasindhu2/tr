@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Dimensions,Alert,ImageBackground,Text,View,ScrollView, TouchableOpacity,TextInput} from 'react-native';
+import { StyleSheet,Image, Dimensions,Alert,ImageBackground,Text,View,ScrollView, TouchableOpacity,TextInput} from 'react-native';
 import { useState } from 'react';
 import Checkbox from "expo-checkbox";
+
 
 export default function RegisterScreen({navigation}) {
     const [name, setName] = useState("");
@@ -126,12 +127,18 @@ const cancel = () => {
 
   return (
     <ScrollView>
-    <ImageBackground style= {styles.back} source={require("../../../../assets/loard.png")}>
+    <ImageBackground style= {styles.back} source={require("../../../../assets/s.png")}>
     <View style={styles.container}>
   <StatusBar style="auto" />
         <View>
              <Text style = {styles.Text}>Create Your Account</Text>   
          </View>
+          <View>
+            <Image
+              style={styles.image}
+              source={require('../../../../assets/shi.png')}
+            />
+          </View>
          <View style ={styles.inputField}>
    
    <View style ={styles.inputContainer}>
@@ -196,7 +203,7 @@ const cancel = () => {
         <Checkbox
        value = {sign}
          onValueChange= { () => setSign(!sign)}
-         color={sign ? "#4630EB" : undefined}
+         color={sign ? "#4630EB" : "black"}
         /> 
         <Text style = {styles.checkboxText}>By signing up, you agree to Bank's Term of Use & Privacy Policy</Text>
    </View>
@@ -256,12 +263,19 @@ const styles = StyleSheet.create({
   fontSize:30,
   textAlign:"center",
   alignSelf:"flex-start",
-    color:"#3B278C",
+    color:"black",
   margin:7,
   fontWeight:"bold",
  
-  marginBottom:40
+  marginBottom:10
  
+  },
+  image: {
+    width: 50,
+    height: 50,
+    marginBottom: 10,
+    borderRadius: 50,
+
   },
 
     inputField : {
@@ -287,7 +301,7 @@ const styles = StyleSheet.create({
   },
   passwordStyles: {
     color:"black",
-    fontSize:15,
+    fontSize:18,
     fontWeight:"bold"
   },
    signText: {
@@ -327,8 +341,9 @@ const styles = StyleSheet.create({
     textAlign:"center",
   },
    checkboxContainer: {
-    backgroundColor: '#fff', 
-    borderWidth: 0,
+    backgroundColor: 'black', 
+    borderWidth: 1,
+    borderColor:"black"
   },
     checkbox: {
     
@@ -345,7 +360,7 @@ const styles = StyleSheet.create({
     padding:5,
     marginLeft:5,
     fontWeight:'bold',
-    color:"white"
+    color:"black"
   },
 
 
@@ -372,7 +387,7 @@ const styles = StyleSheet.create({
     justifyContent:"center"
   },
   RegisterText:{
-    color:"blue",
+    color:"pink",
     fontWeight:"bold",
     fontSize:15
   },

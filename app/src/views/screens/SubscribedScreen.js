@@ -39,8 +39,8 @@ const SubscribedScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ backgroundColor: "#B7E2E9", flex: 1 }}>
       <View style={style.header}>
-        <Icon name="arrow-back-ios" size={28} color ="white" onPress={navigation.goBack} />
-        <Text style={{ fontSize: 20, fontWeight: 'bold' , color:"white"}}>Cart</Text>
+        <Icon name="arrow-back-ios" size={28} color ="black" onPress={navigation.goBack} />
+        <Text style={{ fontSize: 20, fontWeight: 'bold' , color:"black"}}>Cart</Text>
       </View>
       <FlatList
         showsVerticalScrollIndicator={false}

@@ -6,7 +6,38 @@ import { useState } from 'react';
 export default function ForgotPasswordScreen({navigation}) {
   
    
-   const [email, SetEmail] = useState("");
+  
+  const [email, setEmail] = useState('');
+ 
+  const [emailError, setEmailError] = useState('');
+  
+
+
+  const handleEmailChange = (value) => {
+    setEmail(value);
+    setEmailError('');
+  };
+
+  
+
+
+
+  const validateEmail = () => {
+    const e = /^\S+@\S+\.\S+$/;
+    return e.test(email);
+  };
+
+  const submit = () => {
+    if (!validateEmail()) {
+      setEmailError('Please enter a valid email address.');
+    }
+   
+    if (validateEmail()) {
+      navigation.navigate("LogIn")
+    }
+
+  }
+
    
   
   return (
@@ -30,12 +61,15 @@ export default function ForgotPasswordScreen({navigation}) {
      placeholder='Email'
        placeholderTextColor="#0DA0D5"
        value={email}
-         onChangeText={(text) => SetEmail(text)}
+      onChangeText={handleEmailChange}
        />
+
+      
+            {emailError ? <Text style = {{color:"red",padding:5,fontWeight:"bold"}}>{emailError}</Text> : null}
      
 
 
-       <TouchableOpacity style={styles.button} onPress = {() => navigation.goBack("HomeScreen")}>
+       <TouchableOpacity style={styles.button} onPress = {submit}>
                 <Text style={styles.LogInText}>Submit</Text>
       
         </TouchableOpacity>

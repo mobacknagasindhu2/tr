@@ -1,4 +1,4 @@
-const homes  = [
+const Homes  = [
     {
         id : 1,
         name:"Somnath Jyotirlinga",
@@ -118,4 +118,5 @@ const homes  = [
         details:"The Ghrishneshwar Jyotirlinga is located in a village called Verul, which lies 20 km from Daulatabad, near Aurangabad in Maharashtra. Located near this temple is the famous tourist site – Ajanta & Ellora caves. This temple was built by Ahilyabai Holkar who also rebuilt the Kashi Vishwanath Temple in Varanasi. The Ghrishneshwar temple is also known by other names like Kusumeswarar, Ghushmeswara, Grushmeswara and Grishneswara. According to the Shiva Purana, a couple named Sudharm and Sudeha resided on the Devagiri Mountain. They were childless, and thus Sudeha got her sister Ghushma married to Sudharm. They bore a son who rendered Ghushma proud and Sudeha jealous of her sister. In her jealousy, Sudeha threw the son in the lake where Ghushma used to discharge 101 lingams. Ghushma prayed to Lord Shiva who ultimately returned her the son and told her of her sister’s deeds. Sudharm asked Shiva to emancipate Sudeha which left Shiva pleased with his generosity. On Sudharm’s request, Shiva manifested himself in the form of the Jyotirlinga and assumed the name Ghushmeshwar."
     },
 ]
-export default homes;
+
+export default Homes

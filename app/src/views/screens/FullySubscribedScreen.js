@@ -271,8 +271,8 @@ const FullySubscribedScreen = ({navigation}) => {
      
       <StatusBar style="auto" />
       <View style={styles.header}>
-        <Icon name="arrow-back-ios" size={28} color = "white" onPress={navigation.goBack} />
-        <Text style={{ fontSize: 25, fontWeight: 'bold' , color:"white" , marginBottom:5}}>CheckOut</Text>
+        <Icon name="arrow-back-ios" size={28} color = "black" onPress={navigation.goBack} />
+        <Text style={{ fontSize: 25 , fontWeight: 'bold' , color:"black" , marginBottom:5}}>CheckOut</Text>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}> 
       <View style = {styles.addressText}>

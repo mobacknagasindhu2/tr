@@ -1,10 +1,9 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-import { View, StyleSheet,ScrollView ,Text,Image, StatusBar} from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, StyleSheet,Text,Image, StatusBar} from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-export default function UserDetailsScreen() {
+export default function UserDetailsScreen({navigation}) {
     return(
       <SafeAreaView style = {styles.container}>
  
@@ -19,6 +18,8 @@ export default function UserDetailsScreen() {
                                 source = {require("../../../../assets/profile.png")}
                                style = {styles.image}
                             />
+                        <Text style={styles.text}>nagasindhu@gmail.com</Text>
+           
                             <Text style = {styles.text}>Sindhu</Text>
                             <Text style = {styles.text}>+9121550729</Text>
                             </View>
@@ -34,18 +35,24 @@ export default function UserDetailsScreen() {
      
                       
                       </View>
+          <TouchableOpacity onPress={() => navigation.navigate("HomeScreen")}>
                         <View style ={{flexDirection : "row", marginBottom:30}}>
-                          <Icon name="home" size= {28} color="white"/>
+                       
+                          <Icon name="home" size= {28} color="black"/>
                           <Text style={{paddingLeft:20, fontWeight:"bold",fontSize:18,}}>Home</Text>
-                          
+          
 
                         </View>
+                        </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Subscribe")}>
                            <View style ={{flexDirection : "row",  marginBottom:30}}>
-                          <Icon name="heart" size= {28} color="white"/>
+         
+                          <Icon name="heart" size= {28} color="black"/>
                           <Text style={{paddingLeft:20, fontWeight:"bold",fontSize:18}}>Favourite</Text>
-                          
+            </View>
+        </TouchableOpacity>
 
-                        </View>
+                       
 {/*                         
                            <View style ={{flexDirection : "row",  marginBottom:30}}>
                           <MaterialCommunityIcons name="bell" size= {28} color="white"/>
