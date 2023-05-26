@@ -41,7 +41,7 @@ export default function LoginScreen({navigation}) {
     if (!validatePassword()) {
       setPasswordError('Password must contain at least 6 characters.');
     }
-    if (!validateEmail() && !validatePassword()) {
+    if (validateEmail() && validatePassword()) {
       navigation.replace("HomeScreen")
     }
 
