@@ -8,6 +8,7 @@ import HomeScreen from '../screens/HomeScreen';
 import FullySubscribedScreen from '../screens/FullySubscribedScreen';
 import SubscribedScreen from '../screens/SubscribedScreen';
 import UserDetailsScreen from '../screens/UserDetailsScreen';
+import GiftScreen from '../screens/GiftScreen';
 const Tab = createBottomTabNavigator();
 
 const BottomNavigator = () => {
@@ -29,6 +30,15 @@ const BottomNavigator = () => {
         options={{
           tabBarIcon: ({ color }) => (
             <Icon name="home-filled" color={color} size={28} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="GiftScreen"
+        component={GiftScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Icon name="card-giftcard" color={color} size={28} />
           ),
         }}
       />

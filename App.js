@@ -8,6 +8,7 @@ import BottomNavigator from './app/src/views/navigators/BottomNavigator';
 import ForgotPasswordScreen from './app/src/views/screens/ForgotPassword';
 import DetailsScreen from './app/src/views/screens/DetailsScreen';
 import SuccessfullyScreen from './app/src/views/screens/Successfully';
+import FullySubscribedScreen from './app/src/views/screens/FullySubscribedScreen';
 
 const Stack = createStackNavigator();
 
@@ -24,7 +25,7 @@ export default function App() {
         <Stack.Screen name="HomeScreen" component={BottomNavigator} />
         <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
         <Stack.Screen name="Successfully" component={SuccessfullyScreen} />
-
+        <Stack.Screen name="FullySubscribe" component={FullySubscribedScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
