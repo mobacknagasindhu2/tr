@@ -389,7 +389,7 @@ const styles = StyleSheet.create({
   RegisterText:{
     color:"pink",
     fontWeight:"bold",
-    fontSize:15
+    fontSize:17
   },
   LoginText:{
     color:"white",
